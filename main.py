@@ -15,9 +15,9 @@ templates = Jinja2Templates(directory="templates")
 async def home(request: Request):
     return templates.TemplateResponse(
         "index.html",
-        {"request": request, "message": "Bienvenue sur mon application FastAPI!"}
+        {"request": request, "message": "Bienvenue sur mon application FastAPI! Server"}
     )
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True) 
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True) 
